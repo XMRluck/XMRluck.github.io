@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#10121b">
+  <meta name="description" content="A small personal homepage for XMRluck.">
+  <title>XMRluck — Home</title>
+  <style>
+    :root { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #f0f2ff; background: #10121b; }
+    * { box-sizing: border-box; }
+    body { min-height: 100vh; margin: 0; background: radial-gradient(ellipse 55% 55% at 80% 15%, #273252 0%, transparent 75%), #10121b; }
+    a { color: inherit; }
+    .shell { width: min(100% - 3rem, 960px); margin-inline: auto; }
+    header { display: flex; justify-content: space-between; align-items: center; padding-block: 2rem; }
+    .brand { font-weight: 750; letter-spacing: -.04em; text-decoration: none; font-size: 1.15rem; }
+    .brand span { color: #a8b7ff; }
+    .tag { font-size: .78rem; letter-spacing: .11em; text-transform: uppercase; color: #b8bfd7; border: 1px solid #42485e; border-radius: 999px; padding: .55rem .85rem; }
+    main { min-height: calc(100vh - 160px); display: flex; align-items: center; padding-block: 5rem 7rem; }
+    .content { max-width: 760px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: .7rem; color: #b9c7ff; font-size: .87rem; letter-spacing: .13em; text-transform: uppercase; font-weight: 650; }
+    .dot { width: .55rem; height: .55rem; border-radius: 50%; background: #a7b8ff; box-shadow: 0 0 18px #a7b8ff; }
+    h1 { font-size: clamp(3.7rem, 11vw, 7.5rem); line-height: 1; letter-spacing: -.075em; margin: 1.1rem 0 1.6rem; }
+    h1 span { color: #a8b7ff; }
+    .intro { max-width: 630px; color: #c0c6d9; font-size: clamp(1.15rem, 2.5vw, 1.55rem); line-height: 1.6; }
+    .note { max-width: 600px; color: #969fb9; line-height: 1.8; font-size: 1rem; margin-top: 1.5rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: .75rem 1.25rem; border-radius: .7rem; font-weight: 650; text-decoration: none; transition: transform .18s ease, background .18s ease; }
+    .button:hover { transform: translateY(-3px); }
+    .button:focus-visible, .brand:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+    .primary { background: #a8b7ff; color: #151a31; }
+    .primary:hover { background: #c2cdff; }
+    .secondary { border: 1px solid #59627d; color: #e6e9f7; }
+    .secondary:hover { background: #262d44; }
+    footer { border-top: 1px solid #30364a; padding-block: 1.3rem 2rem; color: #aab2ca; font-size: .88rem; }
+    @media (max-width: 600px) { .shell { width: min(100% - 2rem, 960px); } header { padding-block: 1.35rem; } .tag { font-size: .67rem; } main { padding-block: 4rem 6rem; } }
+    @media (prefers-reduced-motion: reduce) { .button { transition: none; } .button:hover { transform: none; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header><a class="brand" href="#home" aria-label="XMRluck home">XM<span>R</span>luck</a><span class="tag">Personal space</span></header>
+    <main id="home">
+      <div class="content">
+        <div class="eyebrow"><span class="dot" aria-hidden="true"></span> Hello, internet</div>
+        <h1>I'm <span>XMRluck.</span></h1>
+        <p class="intro">Welcome to my little corner of the web. I'm curious about how ideas become things you can actually build.</p>
+        <p class="note">This is a space to keep learning, experimenting, and sharing what I make along the way. Thanks for stopping by.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/XMRluck" rel="noopener noreferrer">Explore my GitHub ↗</a>
+          <a class="button secondary" href="https://github.com/XMRluck/XMRluck.github.io" rel="noopener noreferrer">View this site's source ↗</a>
+        </div>
+      </div>
+    </main>
+    <footer>© <span id="year">2025</span> XMRluck · Made with HTML &amp; CSS</footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
